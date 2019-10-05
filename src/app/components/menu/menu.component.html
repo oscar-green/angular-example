@@ -1,4 +1,3 @@
-<div>
-    <button></button>
-</div>
-
+<!-- Input is accessed from the button using a template reference variable -->
+<input type="text" placeholder="URL..." #url>
+<button (click)= add(url.value)>Add</button>

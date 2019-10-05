@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImagesService } from 'src/app/services/images.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private imagesService: ImagesService) { }
 
   ngOnInit() {
   }
 
+  add(url: string) {
+    console.log(url);
+    this.imagesService.addImage(url);
+  }
 }
