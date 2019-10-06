@@ -1,6 +1,6 @@
 <div id="container">
     <app-image *ngFor="let url of urls | async" 
         [url]="url"
-        (clickImage)="selectedImage.emit(url)">
+        (click)="selectedImage.emit(url)">
     </app-image>
 </div>
