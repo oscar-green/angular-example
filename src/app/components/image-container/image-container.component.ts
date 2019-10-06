@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ImagesService } from '../../services/images.service';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -9,11 +9,23 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class ImageContainerComponent implements OnInit {
 
+  @Output() selectedImage = new EventEmitter<string>();
+
   urls: Observable<string[]>;
+  backgroundUrl: string;
+  
 
   constructor(private imagesService: ImagesService) { }
 
   ngOnInit() {
     this.urls = this.imagesService.getImages();
+  }
+
+
+
+  
+
+  onSetBackground(url: string): void {
+    this.backgroundUrl = url;
   }
 }

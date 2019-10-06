@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'angular-example';
 
-  constructor() {
-    
+  backgroundUrl = "";
+
+  constructor() { }
+
+  setBackground(url: string): void {
+    this.backgroundUrl = url;
   }
 }

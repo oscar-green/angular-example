@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-image',
@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ImageComponent implements OnInit {
 
   @Input() url: string;
+  @Output() clickImage = new EventEmitter();
+
+  isFullscreen = false;
 
   constructor() { }
 
