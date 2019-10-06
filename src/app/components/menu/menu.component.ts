@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagesService } from 'src/app/services/images.service';
 
+/**
+ * Menu bar that allows user to add images
+ */
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',

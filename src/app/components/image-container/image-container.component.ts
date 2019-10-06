@@ -3,7 +3,7 @@ import { ImagesService } from '../../services/images.service';
 import { Observable } from 'rxjs/internal/Observable';
 
 /**
- * Displays all images in ImagesService
+ * Displays all images in {@link ImagesService}
  */
 @Component({
   selector: 'app-image-container',
