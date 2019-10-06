@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
+/**
+ * Keeps track of all images
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -10,11 +13,11 @@ export class ImagesService {
 
   constructor() { }
 
-  addImage(url: string): void {
+  addUrl(url: string): void {
     this.urls.push(url);
   }
 
-  getImages(): Observable<string[]> {
+  getUrls(): Observable<string[]> {
     return of(this.urls);
   }
 }

@@ -1,5 +1,7 @@
-<div id="container" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')'}">
+<div 
+  id="container" 
+  [style.background-image]="'url(' + backgroundUrl + ')'"
+>
   <app-menu></app-menu>
-  <app-image-container 
-    (selectedImage)="setBackground($event)"></app-image-container>
+  <app-image-container (selectedImage)="setBackground($event)"></app-image-container>
 </div>

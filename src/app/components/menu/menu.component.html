@@ -1,5 +1,5 @@
-<!-- Input is accessed from the button using a template reference variable -->
 <div id="container" class="input-group">
+    <!-- Input is accessed from the button using a template reference variable -->
     <input class="form-control" type="text" placeholder="URL..." #url>
-    <button class="btn btn-primary" (click)= add(url.value)>Add</button>
+    <button class="btn btn-primary" (click)= addUrl(url.value)>Add</button>
 </div>

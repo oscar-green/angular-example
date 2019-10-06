@@ -10,11 +10,9 @@ export class MenuComponent implements OnInit {
 
   constructor(private imagesService: ImagesService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  add(url: string) {
-    console.log(url);
-    this.imagesService.addImage(url);
+  addUrl(url: string) {
+    this.imagesService.addUrl(url);
   }
 }
